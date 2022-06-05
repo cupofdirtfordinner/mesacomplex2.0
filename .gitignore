@@ -1,4 +1,5 @@
 _site
 .jekyll-cache
-.vscode
+vscode
 gemfile
+gemfile.lock
