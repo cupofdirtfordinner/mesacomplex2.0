@@ -1,14 +1,36 @@
 <html>
     <head>
-
-        <link rel="stylesheet" href="../roots/css/main.css">
+        
+        <!--google font import-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
+     
+     <link rel="stylesheet" href="../roots/css/main.css">   
+     <link rel="icon" type="image/x-icon" href="../roots/images/mesa-icon-pride.png">
 
         {{ title}}
 
     </head>
     <body>
 
+        <div id="divnavbar">
+            <ul id="listnavbar">
+                <img id="icon" src="/roots/images/mesa-icon-pride.png"></li>
+                <button id="btnnavbar" onclick="location.href = 'index.md' ;">landing</a></li>
+                <button id="btnnavbar" onclick="location.href = '/miscellaneous/meet-the-team/index.md' ;">meet the team</a></li>
+                <button id="btnnavbar" onclick="location.href = 'https://forum.mesacomplex.tk' ;">forum</a></li>
+                    
+            </ul> 
+        </div>
+
+        <div id="gameslist">
+            {% include btn.html %}
+        </div>
+
+        <div id="page">
         {{ content }}
+        </div>
 
     </body>
 </html>
