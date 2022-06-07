@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto Mono', monospace;
     background-color:  #10100F;
     
-    background-image: url( '../images/image2VectorSplit.svg' );
+    background-image: url( '../images/bgs/bg.svg' );
     background-repeat: no-repeat;
     background-size: 360% 175%;
     background-attachment: fixed;
