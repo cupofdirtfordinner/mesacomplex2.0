@@ -43,6 +43,19 @@
         width: 80%;
     }
 
+    #sortlist {
+        display: table;
+        table-layout: fixed;
+        list-style-type: none;
+
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+        transform: 20px;
+    }
+    
+
 /*navbar*/
 
 #topnav-div {
@@ -158,7 +171,11 @@ object-fit: cover;
 transition-timing-function: ease-in-out;
 transition-duration: .15s;
 }
-    
+
+#buttondiv:hover:before #thumbnail {
+
+}
+
 #buttondiv:hover #thumbnail {
 transform: scaleY(1);
 }
