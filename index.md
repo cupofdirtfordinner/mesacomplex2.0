@@ -3,4 +3,6 @@ layout: main
 title: landing
 ---
 
-![mesa pride logo](./roots/images/mesa-pride.png)
+![mesa pride logo](./roots/images/mesa.png)
+
+woweee
