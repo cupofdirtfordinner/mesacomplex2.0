@@ -58,65 +58,74 @@
 
 /*navbar*/
 
-#topnav-div {
-    background: linear-gradient(50deg, rgba(6,6,5,1) 0%, rgba(46,43,40,1) 100%); 
-    font-size: 20px;
+    #topnav-div {
+        background: linear-gradient(50deg, rgba(6,6,5,1) 0%, rgba(46,43,40,1) 100%); 
+        font-size: 20px;
 
-    border-radius: 10px;
-    overflow: hidden;
-}
+        border-radius: 10px;
+        overflow: hidden;
+    }
 
-#topnav-list {
-    margin: 10px;
-    float: left;
-}
+    #topnav-list {
+        margin: 10px;
+        float: left;
+    }
 
-#topnav-button {
-    background: linear-gradient(50deg, rgba(46,43,40,0.5) 0%, rgba(16,16,15,0.5) 100%);
-    color: white;
-    font-size: 15px;
+    #topnav-button {
+        background: linear-gradient(50deg, rgba(46,43,40,0.5) 0%, rgba(16,16,15,0.5) 100%);
+        color: white;
+        font-size: 15px;
 
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 20px;
-    padding: 12px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 20px;
+        padding: 12px;
 
-    border: none;
-    border-radius: 10px;
+        transform: rotate(0deg);
+        border: none;
+        border-radius: 10px;
 
-    transition-timing-function: ease-in-out;
-    transition-duration: .2s;
-}
+        transition-timing-function: ease-in-out;
+        transition-duration: .2s;
+    }
 
-#topnav-button:hover {
-    background: #F06520;
+    #topnav-button:hover {
+        background: #F06520;
+        font-size: 18px;
 
-    text-shadow:
-    0 1px #121211,
-    -1px 0 #121211,
-    -1px 2px #121211,
-    -2px 1px #121211,
-    -2px 3px #121211,
-    -3px 2px #121211,
-    -3px 4px #121211,
-    -4px 3px #121211,
-    -4px 5px #121211,
-    -5px 4px #121211,
-    -5px 6px #121211,
-    -6px 5px #121211,
-    -6px 7px #121211,
-    -7px 6px #121211,
-    -7px 8px #121211,
-    -8px 7px #121211;
-}
+        margin-top: 2px;
+        margin-bottom: 2px;
+        margin-left: 17px;
+        padding: 10px;
 
-#listnavbar #btnnavbar {
-    color: white;
-    float: left;
-    display: block;
-    text-align: center;
-    text-decoration: bold;
-}
+        transform: rotate(-4deg);
+
+        text-shadow:
+        0 1px #121211,
+        -1px 0 #121211,
+        -1px 2px #121211,
+        -2px 1px #121211,
+        -2px 3px #121211,
+        -3px 2px #121211,
+        -3px 4px #121211,
+        -4px 3px #121211,
+        -4px 5px #121211,
+        -5px 4px #121211,
+        -5px 6px #121211,
+        -6px 5px #121211,
+        -6px 7px #121211,
+        -7px 6px #121211,
+        -7px 8px #121211,
+        -8px 7px #121211;
+    }
+
+    #listnavbar #btnnavbar {
+        color: white;
+        float: left;
+        display: block;
+        text-align: center;
+        text-decoration: bold;
+    }
 
 /*sidebar*/
 
@@ -159,35 +168,53 @@
 }
 
 #thumbnail {
-width: auto;
-height: auto;
-margin: auto;
+    width: auto;
+    height: 0;
+    margin: auto;
 
-border-radius: 10px;
-
-transform: scaleY(0);
-object-fit: cover;
-
-transition-timing-function: ease-in-out;
-transition-duration: .15s;
-}
-
-#buttondiv:hover:before #thumbnail {
-
+    transform: scaleY(0);
+    border-radius: 10px;
 }
 
 #buttondiv:hover #thumbnail {
-transform: scaleY(1);
+    transform: scaleY(1);
+    height: auto;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: .5s;
+}
+
+#buttondiv #buttondiv:hover{
+height: fit-content;
 }
 
 
 /*animations*/
-.scalevertop {
-    -webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-.scalevercenter {
-	-webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
+ @-webkit-keyframes scalevertop {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+  @keyframes scalevertop {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+  
