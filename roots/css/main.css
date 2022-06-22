@@ -27,12 +27,15 @@
 
         padding-top: 1%;
         width: 50px;
-        height: 50px;    
+        height: 50px;
+        
+        transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition-duration: .5s;
     }
 
     #icon:hover {
-        animation-name: huetwist;
-        
+        transform: rotate(20deg);
+        margin-left: 8px;
     }
 
     #logo {
@@ -180,7 +183,7 @@ hr {
 
 #buttondiv {
     height: fit-content;
-    overflow: hidden;
+    overflow: visible;
     transition-timing-function: ease-in-out;
     transition-duration: .2s;
 }
@@ -195,7 +198,7 @@ hr {
 }
 
 #thumbnail {
-    width: 95%;
+    width: 90%;
     height: 0;
     margin: auto;
     margin-top: 0px;
@@ -220,8 +223,9 @@ hr {
 }
 
 #thumbnail:hover {
-    width: 140%;
-    transform: translate(40px, 0px)
+margin-left: 5%;
+width: 120%;
+overflow: visible;
 }
 
 /*animations*/
