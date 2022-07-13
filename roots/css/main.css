@@ -4,7 +4,7 @@
     body {
         font-family: 'Roboto Mono', monospace;
         background-color:  #10100F;
-        color: white;
+        color: rgba(255, 255, 255, 0.4);
 
         background-image: url( '../images/bgs/bg.svg' );
         background-repeat: no-repeat;
@@ -54,8 +54,8 @@
     }
     
     #page {
-        margin-left: 20%;
         width: 80%;
+        margin-left: 20%;
     }
 
     #sortlist {
@@ -66,12 +66,33 @@
         padding: 0;
     }
     
+    .trail { /*cursor trail class btw*/
+        background-color: rgba(255, 255, 255, 0.05);
+        height: 30px;
+        width: 30px;
+        margin-top: -15px;
+        margin-left: -15px;
+        position: absolute;
+
+        border-radius: 10px;
+        
+        pointer-events: none;
+        z-index: 69 /*lmao*/;
+
+        -webkit-animation: rotating 8s linear infinite;
+      -moz-animation: rotating 8s linear infinite;
+      -ms-animation: rotating 8s linear infinite;
+      -o-animation: rotating 8s linear infinite;
+      animation: rotating 8s linear infinite;
+    }
 
 /*navbar*/
 
     #topnav-div {
         background: linear-gradient(50deg, rgba(6,6,5,1) 0%, rgba(46,43,40,1) 100%); 
         font-size: 20px;
+
+        float:top;
 
         border-radius: 10px;
         overflow: hidden;
@@ -143,19 +164,27 @@
 #gameslist {
     background-color: rgba(16,16,15,0.6);
     display: block;
-    overflow: auto;
+    overflow-x: overlay;
+    overflow-y: scroll;
     position: fixed;
     float: left;
+    z-index: 10000;
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 
     height: 100%;
     width: 20%;
+}
+#gamelist::-webkit-scrollbar {
+    visibility: hidden;
 }
 
 #gamebutton {
     background-color: transparent;
     color: white;
+    overflow: visible;
     font-size: 25px;
-
     width: 100%;
 
     border: none;
@@ -184,13 +213,16 @@ hr {
 #buttondiv {
     height: fit-content;
     overflow: visible;
+
     transition-timing-function: ease-in-out;
     transition-duration: .2s;
+    transition-delay: .25s;
 }
 
 #buttondiv:hover {
     background-color: rgba(255, 255, 255, .2);
     padding-bottom: 10px;
+    transition-delay: 0s;
 }
 
 #buttondiv:hover #gamebutton {
@@ -207,26 +239,39 @@ hr {
     transform: translate(0px, 0px);
 
     border-radius: 10px;
-    overflow: visible;
 
     transition-timing-function: ease-in-out;
-    transition-duration: .75s;
+    transition-duration: .8s;
+    transition-delay: 0s;
 }
 
+#thumbnail:hover {
+    width: 120%;
+    position: relative;
+    transform: translate(40px, 0px);
+    filter: drop-shadow(.5rem .5rem 1rem black);
+    z-index: 420;
+    transition-delay: .4s;
+}
+
+
 #buttondiv:hover #thumbnail {
+    margin-top: 6px;
+
     height: auto;
     transform: scaleY(1);
 
-    margin-top: 6px;
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     transition-duration: .5s;
 }
 
-#thumbnail:hover {
-margin-left: 5%;
-width: 120%;
-overflow: visible;
-}
+/*classes*/
+.orig {}
+.expi {}
+.cool {}
+.mous {}
+.user {}
+
 
 /*animations*/
  @-webkit-keyframes scalevertop {
@@ -285,3 +330,32 @@ overflow: visible;
       filter: hue-rotate(0deg);
     }
   }
+
+@-webkit-keyframes rotating /*used for the mouse cursor*/ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
