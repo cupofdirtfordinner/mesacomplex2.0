@@ -5,6 +5,7 @@
         font-family: 'Roboto Mono', monospace;
         background-color:  #10100F;
         color: rgba(255, 255, 255, 0.4);
+        /*overflow: auto;*/
 
         background-image: url( '../images/bgs/bg.svg' );
         background-repeat: no-repeat;
@@ -12,7 +13,6 @@
         background-attachment: fixed;
         background-position: 4%;
 
-        display: block;
         text-align: center;
         font-size: 20px;
     }
@@ -22,7 +22,6 @@
     }
 
     #icon {
-        display: inline-block;
         float: left;
 
         padding-top: 1%;
@@ -56,18 +55,18 @@
     #page {
         width: 80%;
         margin-left: 20%;
-        margin-top: 5%;
+        margin-top: 100px;
+        
     }
 
     #sortlist {
-        display: table;
+        display: block;
         table-layout: fixed;
-        list-style-type: none;
-
-        padding: 0;
+        list-style-type: disc;
+        padding: 0px;
     }
     
-    .trail { /*cursor trail class btw*/
+    .trail { /*cursor trail class*/
         background-color: rgba(255, 255, 255, 0.05);
         height: 30px;
         width: 30px;
@@ -98,9 +97,9 @@
         top: 0px;
 
         border-radius: 10px;
-        overflow: hidden;
-
-        z-index: 68 /* :( */;
+        /*overflow: auto;*/
+        
+        z-index: 68 /* sadge */;
     }
 
     #topnav-list {
@@ -122,8 +121,8 @@
         border: none;
         border-radius: 10px;
 
-        transition-timing-function: ease-in-out;
-        transition-duration: .2s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition-duration: .5s;
     }
 
     #topnav-button:hover {
@@ -169,22 +168,22 @@
 #gameslist {
     background-color: rgba(16,16,15,0.6);
     width: 20%;
+    left: 0px;
+    top: 55px; 
 
-    display: inline;
+    display: block;
     position: fixed;
-    float: bottom;
-    left: -5px;
 
-    z-index: 69420 /*im so funny*/;
+    z-index: 67;
 }
 
 #gamebutton {
     background-color: transparent;
     color: white;
-    overflow: visible;
+    /*overflow: visible;*/
     font-size: 25px;
     width: 100%;
-
+    
     border: none;
 
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -207,19 +206,34 @@ hr /*divider between game buttons*/ {
 
 #buttondiv {
     height: fit-content;
-    overflow: visible;
+    /*overflow: visible;*/
 
     transition-timing-function: ease-in-out;
-    transition-duration: .2s;
+    transition-duration: .3s;
     transition-delay: .25s;
 }
 
+#thumbnail {
+    width: 90%;
+    height: 0;
+    margin: auto;
+    margin-top: 0px;
+
+    transform: scaleY(0);
+    transform: translateX(0px);
+
+    border-radius: 10px;
+    transition-timing-function: ease-in-out;
+    transition-duration: .8s;
+    transition-delay: 0s;
+}
+
+/* */
 #buttondiv:hover #gamebutton {
   font-size: 35px;
 }
 
 #buttondiv:hover {
-    background-color: rgba(255, 255, 255, .2);
     padding-bottom: 10px;
     transition-delay: 0s;
 }
@@ -230,27 +244,12 @@ hr /*divider between game buttons*/ {
   margin-right: 6%;
 }
 
-#thumbnail {
-    width: 90%;
-    height: 0;
-    margin: auto;
-    margin-top: 0px;
-
-    transform: scaleY(0);
-    transform: translate(0px, 0px);
-
-    border-radius: 10px;
- translate()
-    transition-timing-function: ease-in-out;
-    transition-duration: .8s;
-    transition-delay: 0s;
-}
-
 #thumbnail:hover {
     width: 120%;
     position: relative;
   
     filter: drop-shadow(.5rem .5rem 1rem black);
+    transform: translateX(10px);
     
     z-index: 420;
     
@@ -263,10 +262,9 @@ hr /*divider between game buttons*/ {
 
     height: auto;
     transform: scaleY(1);
-    transform: translate(10px, 0px);
 
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition-duration: .5s;
+    transition-duration: .8s;
 }
 
 /*button classes*/
