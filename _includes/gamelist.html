@@ -1,47 +1,33 @@
-<!--
-
-!!HOW TO CREATE NEW BUTTONS
+<!-- -----------------------------
+    HOW TO CREATE NEW BUTTONS
 ---------------------------------
-step 1. paste the following:
-    {% include btn.html url='url' name='name' thumbnail='thumbnail' %}
 
-step 2. upload your game's thumbnail to roots/images/thumbnails
+step 1. type the following:
+    {% include btn.html name='name' %}
 
-step 3. you are done!
+step 2. upload your game's thumbnail to roots/images/thumbnails/
 
-important notice: url is already pointed to the games folder, and thumbnails is already
-pointed to the thumbnails folder. all you need to do is put in the folder/filename -
-otherwise you would be going to games/games/yourgame/, or
-roots/images/thumbnails/roots/images/thumbnails/yourthumbnail.png.png
+step 3. congrats
 
--->
+---------------------------------
+    HOW TO CREATE NEW LISTS
+---------------------------------
 
-{% include btn.html url='url' name='lorem ipsum' thumbnail='testbird' %}
-{% include btn.html url='url' name='very really super long name' thumbnail='testbird' %}
-{% include btn.html url='url' name='c' thumbnail='testbird' %}
-{% include btn.html url='url' name='a' thumbnail='testbird' %}
-{% include btn.html url='url' name='a' thumbnail='testbird' %}
-{% include btn.html url='url' name='a' thumbnail='testbird' %}
-{% include btn.html url='url' name='a' thumbnail='testbird' %}
-{% include btn.html url='url' name='a' thumbnail='testbird' %}
-{% include btn.html url='url' name='e' thumbnail='testbird' %}
-{% include btn.html url='url' name='d' thumbnail='testbird' %}
-{% include btn.html url='url' name='j' thumbnail='testbird' %}
-{% include btn.html url='url' name='lorem ipsum' thumbnail='testbird' %}
-{% include btn.html url='url' name='very really super long name' thumbnail='testbird' %}
-{% include btn.html url='url' name='c' thumbnail='testbird' %}
-{% include btn.html url='url' name='e' thumbnail='testbird' %}
-{% include btn.html url='url' name='d' thumbnail='testbird' %}
-{% include btn.html url='url' name='j' thumbnail='testbird' %}
-{% include btn.html url='url' name='lorem ipsum' thumbnail='testbird' %}
-{% include btn.html url='url' name='very really super long name' thumbnail='testbird' %}
-{% include btn.html url='url' name='c' thumbnail='testbird' %}
-{% include btn.html url='url' name='e' thumbnail='testbird' %}
-{% include btn.html url='url' name='d' thumbnail='testbird' %}
-{% include btn.html url='url' name='j' thumbnail='testbird' %}
-{% include btn.html url='url' name='lorem ipsum' thumbnail='testbird' %}
-{% include btn.html url='url' name='very really super long name' thumbnail='testbird' %}
-{% include btn.html url='url' name='c' thumbnail='testbird' %}
-{% include btn.html url='url' name='e' thumbnail='testbird' %}
-{% include btn.html url='url' name='d' thumbnail='testbird' %}
-{% include btn.html url='url' name='j' thumbnail='testbird' %}
+syntax {{ include list.html name='grug' }} {{ include listbtn.html name='winston be like: overwatch' }}
+
+ LISTS DONT WORK!!!!!! DO NOT USE THEM IT BREAKS EVERYTHING
+---------------------------------
+
+important notice:
+the game's markdown file, folder, and thumbnail all need to have the exact same name
+thumbnails all need to end in .png
+
+------------------------------- -->
+
+{% include btn.html name='testbird' %}
+
+{% include btn.html name='chunger' %}
+
+{% include btn.html name='bweembus' %}
+
+{% include btn.html name='nectar' %}
