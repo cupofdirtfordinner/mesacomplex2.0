@@ -164,7 +164,7 @@
   }
 
   /*gameslist, sidebar*/
-  #gameslist {
+  #gamelist {
     background-color: rgba(16,16,15,0.6);
     width: 20%;
     left: 0px;
@@ -273,23 +273,6 @@ hr /*divider between game buttons*/ {
 .mous {}
 .user {}
 /*REMINDER TO MAKE THESE DO THINGS AT SOME POINT*/
-
-/*lists*/
-
-#listbutton {
-background-color: transparent;
-    color: white;
-    /*overflow: visible;*/
-    float: top;
-    font-size: 25px;
-    width: 80%;
-    
-    border: none;
-
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition-duration: .5s;
-}
-
 
 /*animations*/
  @-webkit-keyframes scalevertop {
