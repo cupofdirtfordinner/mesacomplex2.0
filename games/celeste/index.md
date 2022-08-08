@@ -1,5 +1,6 @@
 ---
 layout: main
-title: "Celeste"
+title: landing
 ---
-<embed src="src/" width="900" height="700" allowfullscreen>
+
+<embed src="src/" width="500" height="570" allowfullscreen scale="tofit"/>

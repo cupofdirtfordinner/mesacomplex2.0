@@ -103,19 +103,19 @@
   }
   
   #topnav-list {
-      margin: 10px;
+      margin: 9px;
       float: left;
   }
   
   #topnav-button {
       background: linear-gradient(50deg, rgba(46,43,40,0.5) 0%, rgba(16,16,15,0.5) 100%);
       color: white;
-      font-size: 15px;
+      font-size: 14px;
   
-      margin-top: 5px;
-      margin-bottom: 5px;
+      margin-top: 4px;
+      margin-bottom: 4px;
       margin-left: 20px;
-      padding: 12px;
+      padding: 10px;
   
       transform: rotate(0deg);
       border: none;
