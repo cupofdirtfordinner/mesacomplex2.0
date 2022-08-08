@@ -182,7 +182,7 @@
 
   /*gameslist, sidebar*/
   #gamelist {
-    background-color: rgba(16,16,15,0.6);
+    background-color: rgba(16,16,15,0.9);
     width: 30%;
     height: calc(100vh - 55px);
     left: 0px;
