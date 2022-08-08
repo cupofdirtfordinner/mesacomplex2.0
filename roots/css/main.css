@@ -292,37 +292,12 @@ hr /*divider between game buttons*/ {
 .user {}
 /*REMINDER TO MAKE THESE DO THINGS AT SOME POINT*/
 
+/*game types*/
+
+
+
 /*animations*/
- @-webkit-keyframes scalevertop {
-    0% {
-      -webkit-transform: scaleY(0.4);
-              transform: scaleY(0.4);
-      -webkit-transform-origin: 100% 0%;
-              transform-origin: 100% 0%;
-    }
-    100% {
-      -webkit-transform: scaleY(1);
-              transform: scaleY(1);
-      -webkit-transform-origin: 100% 0%;
-              transform-origin: 100% 0%;
-    }
-  }
-  @keyframes scalevertop {
-    0% {
-      -webkit-transform: scaleY(0.4);
-              transform: scaleY(0.4);
-      -webkit-transform-origin: 100% 0%;
-              transform-origin: 100% 0%;
-    }
-    100% {
-      -webkit-transform: scaleY(1);
-              transform: scaleY(1);
-      -webkit-transform-origin: 100% 0%;
-              transform-origin: 100% 0%;
-    }
-  }
-  
-  
+
 @-webkit-keyframes rotating /*used for the mouse cursor*/ {
   from {
     -webkit-transform: rotate(0deg);
