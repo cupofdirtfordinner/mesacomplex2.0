@@ -1,5 +1,5 @@
 ---
-layout: game
+layout: main
 title: Celeste
 ---
 

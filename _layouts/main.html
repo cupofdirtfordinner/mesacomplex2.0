@@ -6,11 +6,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
 
-        <link rel="stylesheet" href="roots/css/main.css"> 
+        <link rel="stylesheet" href="{{ "/roots/css/main.css" | relative_url }}"> 
         
         <script src='roots/js/sort.js'></script>
         <script src="roots/js/warpjs/warp.js"></script> <!--MAKE THE BACKGROUND WARP AND TWIST AND STUFF-->
         
+        <link rel="icon" type="image/x-icon" href="roots/images/mesa-icon.png">
+
         {{ title }}
 
     </head>
@@ -20,7 +22,7 @@
 
         <div id="topnav-div">
             <ul id="topnav-list">
-                <img id="icon" onclick="location.href = 'index.md' ;" src="/roots/images/mesa-icon.png"></li>
+                <img id="icon" onclick="location.href = 'index.md' ;" src="roots/images/mesa-icon.png"></li>
                 <button id="topnav-button" onclick="location.href = '/' ;">landing</a></li>
                 <button id="topnav-button" onclick="location.href = '../miscellaneous/meet-the-team/index.md' ;">meet the team</a></li>
                 <button id="topnav-button" onclick="location.href = 'https://forum.mesacomplex.tk' ;">forum</a></li>
