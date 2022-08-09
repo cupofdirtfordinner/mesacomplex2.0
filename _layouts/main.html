@@ -8,12 +8,12 @@
 
         <link rel="stylesheet" href="{{ "/roots/css/main.css" | relative_url }}"> 
         
-        <script src='roots/js/sort.js'></script>
+        <script src='{{ "roots/js/sort.js" | relative_url }}'></script>
         <script src="roots/js/warpjs/warp.js"></script> <!--MAKE THE BACKGROUND WARP AND TWIST AND STUFF-->
         
         <link rel="icon" type="image/x-icon" href="roots/images/mesa-icon.png">
 
-        {{ title }}
+        <title>{{ page.title }}</title>
 
     </head>
     <body>
@@ -22,12 +22,12 @@
 
         <div id="topnav-div">
             <ul id="topnav-list">
-                <img id="icon" onclick="location.href = 'index.md' ;" src="roots/images/mesa-icon.png"></li>
+                <img id="icon" onclick="location.href = 'index.md' ;" src="{{ "/roots/images/mesa-icon.png" | relative_url }}"></li>
                 <button id="topnav-button" onclick="location.href = '/' ;">landing</a></li>
                 <button id="topnav-button" onclick="location.href = '../miscellaneous/meet-the-team/index.md' ;">meet the team</a></li>
                 <button id="topnav-button" onclick="location.href = 'https://forum.mesacomplex.tk' ;">forum</a></li>
             </ul> 
-            <p id="game-title">you're in the landing page. click a game!</p>
+            <p id="game-title">{{ page.title }}</p>
         </div>
       
         <div id="gamelist">
@@ -40,5 +40,7 @@
         {{ content }} 
         </div>
         
+        <p>{{ /games/{{ include.name }} | relative_url }}</p>
+
     </body>
 </html>
