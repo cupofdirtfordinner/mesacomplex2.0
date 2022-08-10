@@ -1,6 +1,6 @@
 ---
 layout: main
-title: landing
+title: Homepage
 ---
 
 ![mesa logo](./roots/images/mesa.png){: #logo}
