@@ -1,6 +1,6 @@
 ---
-layout: main
-title: Mari0
+layout: game
+title: "Mari0"
 ---
 
 <center>

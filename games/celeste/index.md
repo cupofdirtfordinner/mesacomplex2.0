@@ -1,6 +1,10 @@
 ---
-layout: main
-title: Celeste
+layout: game
+title: "funny monke game lore trilogy"
 ---
 
-<iframe src="src/" width="580" height="570" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);" allowfullscreen/>
+<ul>
+    <li><a href="celeste1/">Celeste</a></li>
+    <li><a href="celeste2/">Celeste 2: Lani's Trek</a></li>
+
+</ul>

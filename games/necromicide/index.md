@@ -1,6 +1,6 @@
 ---
-layout: main
-title: NECROMICIDE
+layout: game
+title: "NECROMICIDE"
 ---
 
 <embed src="src/" width="900" height="700" allowfullscreen>
