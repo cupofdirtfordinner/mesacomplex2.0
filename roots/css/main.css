@@ -67,7 +67,7 @@
     }
     
     #game-title {
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      background: linear-gradient(90deg, rgb(243, 0, 53) 0%, rgb(255, 72, 0) 35%, rgb(255, 255, 255) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
@@ -81,7 +81,7 @@
       transition-duration: 0.2s;
     }
 
-    #game-title:hover {transform:scaleX(1.25); filter: drop-shadow(0 0 0.25rem black);}
+    #game-title:hover {transform:scaleX(1.4); filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.7));}
 
     .trail { /*cursor trail class*/
         background-color: rgba(255, 255, 255, 0.05);
@@ -232,7 +232,7 @@ hr /*divider between game buttons*/ {
 }
 
 #thumbnail {
-    width: 85%;
+    width: 40%;
     height: 0;
     margin: auto;
     margin-top: 0px;
@@ -262,7 +262,7 @@ hr /*divider between game buttons*/ {
 }
 
 #thumbnail:hover {
-    width: 98%;
+    width: 60%;
     position: relative;
   
     filter: drop-shadow(.5rem .5rem 1rem black);

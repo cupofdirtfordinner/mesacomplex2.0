@@ -1,7 +1,7 @@
-<li>
-<div id="buttondiv">    
-<button id="gamebutton" onclick="location.href ={{ include.name | relative_url }};">{{ include.name }}</button>
-<image id="thumbnail" src="roots\images\thumbnails\{{ include.name }}.png"></image>
-<hr class="rounded">
-</div>
-</li>
+<li> 
+    <div id="buttondiv">
+    <button id="gamebutton" onclick="location.href = '/games/{{ include.name }}/' ;">{{ include.name }}</button>
+    <image id="thumbnail" src="/roots/images/thumbnails/{{ include.name }}.gif"></image>
+    <hr class="rounded">
+    </div> 
+    </li>  <!--wait what the fuck why did this start working-->
