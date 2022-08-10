@@ -322,3 +322,23 @@ hr /*divider between game buttons*/ {
     transform: rotate(360deg);
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121211;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2a2a29;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #414141;
+}
