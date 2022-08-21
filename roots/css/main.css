@@ -285,8 +285,8 @@ hr /*divider between game buttons*/ {
 }
 
 /*button classes*/
-.orig {}
-.expi {}
+.mesa {background-color:red;}
+.test {}
 .cool {}
 .mous {}
 .user {}

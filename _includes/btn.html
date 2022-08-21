@@ -1,9 +1,8 @@
 <li> {% capture liquidname %}/games/{{ include.name }}{% endcapture %} 
      {% capture liquidthumbnail %}roots/images/thumbnails/{{ include.name }}.gif{% endcapture %} 
-    <div id="buttondiv"> 
-    <div id="buttondiv">
+    <div id="buttondiv" class="{{ include.tags }}"> 
     <button id="gamebutton" onclick="location.href = '{{ liquidname | relative_url}}' ;">{{ include.name }}</button>
-    <image id="thumbnail" src=" {{ liquidthumbnail | relative_url }}"></image>
+    <image id="thumbnail" onclick="location.href = '{{ liquidname | relative_url}}' ;" src=" {{ liquidthumbnail | relative_url }}"></image>
     <hr class="rounded">
     </div> 
     </li> 
