@@ -1,10 +1,13 @@
-<div id="buttondiv" class="{{ include.tags }}"> 
-     <button id="gamebutton" onclick="location.href = '{{ liquidname | relative_url}}' ;">{{ include.name }}</button>
-     <image id="thumbnail" onclick="location.href = '{{ liquidname | relative_url}}' ;" src=" {{ liquidthumbnail | relative_url }}"></image>
- 
-     <p id="unmesatext">we were not given permission from the developer to use this game on our site.</p>
-     <p id="fosstext">we were not given permission from the developer to use this game on our site, however it is free and open source.</p>
-     
-     <hr class="rounded">
-     </div> 
-     </li> 
+<li> {% capture liquidname %}/games/{{ include.name }}{% endcapture %} 
+     {% capture liquidthumbnail %}roots/images/thumbnails/{{ include.name }}.gif{% endcapture %} 
+    <div id="buttondiv" class="{{ include.tags }}"> 
+    <button id="gamebutton" onclick="location.href = '{{ liquidname | relative_url}}' ;">{{ include.name }}</button>
+    <image id="thumbnail" onclick="location.href = '{{ liquidname | relative_url}}' ;" src=" {{ liquidthumbnail | relative_url }}"></image>
+    
+    <p id="unmesatext">we were not given permission from the developer to use this game on mesa.rip.</p>
+    <p id="fosstext">this software is FOSS and is allowed to be freely used, modified and shared.</p>
+    <p id="mesatext">we have full permission from the developer to use this game on mesa.rip. </p>
+    
+    <hr class="rounded">
+    </div> 
+    </li> 
