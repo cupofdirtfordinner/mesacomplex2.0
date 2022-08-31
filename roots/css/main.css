@@ -300,14 +300,14 @@ hr /*divider between game buttons*/ {
 .foss #mesatext {display:none;}
 .unmesa #mesatext {display:none;}
 
-.unmesa #unmesatext {font-size:8px;}
+.unmesa #unmesatext {font-size:10px;}
 .unmesa:hover #unmesatext {font-size:14px;}
 
-.foss #fosstext {font-size:8px;}
-.foss:hover #fosstext {font-size:12px;}
+.foss #fosstext {font-size:10px;}
+.foss:hover #fosstext {font-size:14px;}
 
-#mesatext {font-size:8px;}
-#mesatext {font-size:12px;}
+#mesatext {font-size:10px;}
+#mesatext:hover {font-size:14px;}
 
 #buttondiv:not(.foss):not(.unmesa) #unmesatext {display:none;} 
 #buttondiv:not(.foss):not(.unmesa) #fosstext {display:none;} /* im like 90% sure there is a much better way of doing this but i cant figure it out rn */
