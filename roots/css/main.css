@@ -285,12 +285,32 @@ hr /*divider between game buttons*/ {
 }
 
 /*button classes*/
-.orig {}
-.expi {}
+.mesa {}
+.test {}
 .cool {}
 .mous {}
 .user {}
-/*REMINDER TO MAKE THESE DO THINGS AT SOME POINT*/
+.unmesa {background: rgb(131,0,0); background: linear-gradient(0deg, rgba(131,0,0,0.9) 0%, rgba(164,13,54,0.9) 81%);}
+.foss {background: rgb(19,38,78); background: linear-gradient(0deg, rgba(19,38,78,0.9) 5%, rgba(41,64,166,0.9) 81%);}
+
+/* warning logic */
+
+.unmesa #fosstext{display:none;} /* if an object has .unmesa class, then a child with #fosstext will not be displayed */
+.foss #unmesatext{display:none;} /* vice versa */
+.foss #mesatext {display:none;}
+.unmesa #mesatext {display:none;}
+
+.unmesa #unmesatext {font-size:10px;}
+.unmesa:hover #unmesatext {font-size:14px;}
+
+.foss #fosstext {font-size:10px;}
+.foss:hover #fosstext {font-size:14px;}
+
+#mesatext {font-size:10px;}
+#mesatext:hover {font-size:14px;}
+
+#buttondiv:not(.foss):not(.unmesa) #unmesatext {display:none;} 
+#buttondiv:not(.foss):not(.unmesa) #fosstext {display:none;} /* im like 90% sure there is a much better way of doing this but i cant figure it out rn */
 
 /*animations*/
 
@@ -322,6 +342,7 @@ hr /*divider between game buttons*/ {
     transform: rotate(360deg);
   }
 }
+<<<<<<< HEAD
 
 /* width */
 ::-webkit-scrollbar {
@@ -342,3 +363,5 @@ hr /*divider between game buttons*/ {
 ::-webkit-scrollbar-thumb:hover {
   background: #414141;
 }
+=======
+>>>>>>> 5b56b32a7dfa1b966ad7c59b82bb6bab76b1b734

@@ -1,6 +1,10 @@
 ---
-layout: asdfasdf
-title: asdfkjasdhfkashdf
+layout: main
+title: meet the team
 ---
 
-not here!!!! go away!!!!
+{% include meet-the-team/dirt.html %}
+
+{% include meet-the-team/duck.html %}
+
+{% include meet-the-team/grey.html %}

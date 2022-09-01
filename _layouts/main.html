@@ -1,6 +1,18 @@
 <html>
     <head>
-        
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8DBQCM4P2Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8DBQCM4P2Y');
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2081299942914210"
+     crossorigin="anonymous"></script>
+   
         <!--google font import-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +36,7 @@
             <ul id="topnav-list">
                 <img id="icon" onclick="location.href = 'index.md' ;" src="{{ "/roots/images/mesa-icon.png" | relative_url }}"></li>
                 <button id="topnav-button" onclick="location.href = '/' ;">landing</a></li>
-                <button id="topnav-button" onclick="location.href = '../miscellaneous/meet-the-team/index.md' ;">meet the team</a></li>
+                <button id="topnav-button" onclick="location.href = ' {{ miscellaneous\meet-the-team\index.md | relative_url }}' ;">meet the team</a></li>
                 <button id="topnav-button" onclick="location.href = 'https://forum.mesacomplex.tk' ;">forum</a></li>
             </ul> 
             <p id="game-title">{{ page.title }}</p>
