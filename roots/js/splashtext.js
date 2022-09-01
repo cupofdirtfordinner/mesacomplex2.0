@@ -1,4 +1,4 @@
-fetch("/json/lines.json")
+fetch("roots/js/json/lines.json")
 .then(res => res.json())
 .then(json => {
     document.getElementById("splash").innerHTML = json[Math.floor(Math.random() * json.length)];
@@ -6,7 +6,7 @@ fetch("/json/lines.json")
     console.log(error);
 });
 
-fetch("/json/sponsor.json")
+fetch("roots/js/json/sponsor.json")
 .then(res => res.json())
 .then(json => {
     document.getElementById("sponsor").innerHTML = json[Math.floor(Math.random() * json.length)];
