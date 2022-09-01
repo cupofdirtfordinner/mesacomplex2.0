@@ -342,7 +342,6 @@ hr /*divider between game buttons*/ {
     transform: rotate(360deg);
   }
 }
-<<<<<<< HEAD
 
 /* width */
 ::-webkit-scrollbar {
@@ -363,5 +362,9 @@ hr /*divider between game buttons*/ {
 ::-webkit-scrollbar-thumb:hover {
   background: #414141;
 }
-=======
->>>>>>> 5b56b32a7dfa1b966ad7c59b82bb6bab76b1b734
+
+p {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
