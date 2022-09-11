@@ -19,11 +19,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
 
         <link rel="stylesheet" href="{{ "/roots/css/main.css" | relative_url }}"> 
+        <link rel="stylesheet" href="{{ "/roots/css/splash.css" | relative_url }}"> 
         
-        <script src='{{ "roots/js/sort.js" | relative_url }}'></script>
-        <script src="roots/js/warpjs/warp.js"></script> <!--MAKE THE BACKGROUND WARP AND TWIST AND STUFF-->
+        <script src='{{ "/roots/js/sort.js" | relative_url }}'></script>
+        <!--<script src="roots/js/warpjs/warp.js"></script> MAKE THE BACKGROUND WARP AND TWIST AND STUFF-->
         
-        <link rel="icon" type="image/x-icon" href="roots/images/mesa-icon.png">
+        <link rel="icon" type="image/x-icon" href="{{ "/roots/images/mesa-icon.png" | relative_url }}">
 
         <title>{{ page.title }}</title>
 
@@ -34,14 +35,20 @@
 
         <div id="topnav-div">
             <ul id="topnav-list">
-                <img id="icon" onclick="location.href = 'index.md' ;" src="{{ "/roots/images/mesa-icon.png" | relative_url }}"></li>
-                <button id="topnav-button" onclick="location.href = '/' ;">landing</a></li>
-                <button id="topnav-button" onclick="location.href = ' {{ miscellaneous\meet-the-team\index.md | relative_url }}' ;">meet the team</a></li>
-                <button id="topnav-button" onclick="location.href = 'https://forum.mesacomplex.tk' ;">forum</a></li>
+                <img id="icon" onclick="location.href = '/' ;" src="{{ "/roots/images/mesa-icon.png" | relative_url }}"></li>
+                <button id="topnav-button" onclick="location.href = '/' ;">landing</button></li>
+                <div class="dropdown">
+                    <button id="topnav-button" class="dropdown">meet the team</button></li>
+                    <div class="dropdown-content">
+                      <div>{% include meet-the-team/dirt.html %}<hr></div>
+                      <div>{% include meet-the-team/grey.html %}<hr></div>
+                      <div>{% include meet-the-team/slash.html %}<hr></div>
+                    </div>
+                <button id="topnav-button" onclick="location.href = 'https://forum.mesacomplex.tk' ;">forum</button></li>
             </ul> 
             <p id="game-title">{{ page.title }}</p>
         </div>
-      
+
         <div id="gamelist">
             <ul id="sortlist">
                 {% include gamelist.html %}
@@ -53,6 +60,6 @@
         <p>if you notice scaling issues, we're probably aware and are working on it but please scream at us anyawys to get it done! check out our forums or our discord</p>
  
         </div>
-        <script src="{{ roots\js\ruffle\ruffle.js | relative_url }}"></script>
+        <script src="{{ "/roots/js/ruffle/ruffle.js" | relative_url }}"></script>
     </body>
 </html>

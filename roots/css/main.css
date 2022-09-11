@@ -39,7 +39,7 @@
 
     #logo {
         width: 70%;
-        margin-bottom: 10%;
+        margin-bottom: 4%;
 
         transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
         transition-duration: .5s;
@@ -47,9 +47,9 @@
     }
 
     #logo:hover {
+      margin-bottom: 0%;
         width: 90%;
-        margin-bottom: 6.5%;
-        filter: drop-shadow(.5rem .5rem 1rem black)
+        filter: drop-shadow(0 0 3rem black);
     }
     
     #page {
@@ -171,7 +171,7 @@
       -7px 8px #121211,
       -8px 7px #121211;
   }
-  
+
   #listnavbar #btnnavbar {
       color: white;
       float: left;
@@ -179,8 +179,32 @@
       text-align: center;
       text-decoration: bold;
   }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+      top: 54px;
+      display: none;
+      position: absolute;
+      border-radius: 16px;
+      width: 340px;
+      z-index: 1;
+      background:rgba(48, 48, 48, 0.9);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    transition: opacity 0.3s;
+  }
+
+
 
   /*gameslist, sidebar*/
+
+
   #gamelist {
     background-color: rgba(16,16,15,0.9);
     width: 30%;
