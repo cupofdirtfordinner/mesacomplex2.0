@@ -1,14 +1,4 @@
-/*marquee {
-    color: rgba(255,255,255,0.6);
-    transform:translateX(100%);
-    height: 50px;
-    font-size: 46px;
-    margin: 0;
-    animation: scrolling 1s linear infinite;
-}*/
-
-
-
+body {background-color:black;}
 .marquee {
     height: 50px;
     overflow: hidden;
@@ -16,21 +6,23 @@
     white-space: nowrap;
     }
 
-    .marquee p {
+.marquee p {
     font-size: 2em;
     color: rgba(255,255,255,0.6);
     position: absolute;
     margin: 0;
-    line-height: 50px;
     text-align: center;
-    transform:translateX(100%);
-    animation: cssmarquee 15s linear infinite;
-    }
-    @keyframes cssmarquee {
+    transform:translateX(100vw);
+    animation: cssmarquee linear infinite;
+
+      animation-duration: 15s;
+}
+
+@keyframes cssmarquee {
     0% {
-    transform: translateX(100%);
+    transform: translateX(100vw);
     }
     100% {
     transform: translateX(-100%);
     }
-    }
+}
