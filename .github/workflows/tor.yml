@@ -1,0 +1,10 @@
+name: 'Setup Tor environment'
+description: 'Setup a Tor environment and add it to the PATH'
+author: 'warcbot'
+  steps:
+- uses: actions/checkout@main
+- uses: tor-actions/setup-tor@main
+  with:
+    tor-version: '0.4.5.7' # The Tor version to download (if necessary) and use.
+    config-path: ${{ github.workspace }}/.github/.torrc
+- run: tor
