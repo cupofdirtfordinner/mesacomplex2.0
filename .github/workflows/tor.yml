@@ -1,0 +1,32 @@
+name: 'Setup Tor environment'
+description: 'Setup a Tor environment and add it to the PATH'
+author: 'warcbot'
+branding:
+  color: 'gray-dark'
+  icon: 'activity'
+inputs: 
+  tor-version:
+    description: 'The Tor version to download (if necessary) and use. Examples: 0.4.5.7, 0.4.5-rc7'
+    default: '0.4.5.7'
+  stable:
+    description: 'Whether to download only stable versions'
+    default: 'false'
+  daemon:
+    description: 'Run Tor as daemon program'
+    default: 'false'
+  port:
+    description: 'Tor socks port'
+    default: '9050'
+  token:
+    description: Used to pull node distributions from go-versions.  Since there's a default, this is typically not supplied by the user.
+    default: ${{ github.token }}
+  config:
+    description: 'A multi-line configuration to use for Tor.'
+  config-path:
+    description: 'A custom `.torrc` configuration file path to use for Tor (will take priority over `config`).'
+outputs:
+  config-path:
+    description: 'The path to the configuration file (if a path or config was provided).'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
