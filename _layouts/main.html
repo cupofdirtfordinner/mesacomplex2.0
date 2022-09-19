@@ -18,11 +18,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
 
+        <script src="{{ "/roots/js/sort.js" | relative_url }}"></script>
+
         <link rel="stylesheet" href="{{ "/roots/css/main.css" | relative_url }}"> 
         <link rel="stylesheet" href="{{ "/roots/css/splash.css" | relative_url }}"> 
         
-        <script src='{{ "/roots/js/sort.js" | relative_url }}'></script>
-        <!--<script src="roots/js/warpjs/warp.js"></script> MAKE THE BACKGROUND WARP AND TWIST AND STUFF-->
+        <!--<script  src="{{ "/roots/js/warpjs/warp.js" | relative_url }}"></script> MAKE THE BACKGROUND WARP AND TWIST AND STUFF-->
         
         <link rel="icon" type="image/x-icon" href="{{ "/roots/images/mesa-icon.png" | relative_url }}">
 
@@ -31,7 +32,7 @@
     </head>
     <body>
 
-        <script  src="roots/js/trail.js"></script>
+        <script  src="roots/js/trail.js"></script> <!--best to keep this not a relative url, it's a real pain in the ass on game pages-->
 
         <div id="topnav-div">
             <ul id="topnav-list">
