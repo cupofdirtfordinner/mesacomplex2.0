@@ -29,6 +29,14 @@
 
         <title>{{ page.title }}</title>
 
+        <!--metadata (the shit that shows up when you link a website on social media)-->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="mesa.rip: {{ page.title }}"/>
+        <meta property="og:description" content="best game website around"/>
+        <meta property="og:image" content="{{ "/roots/images/mesa-icon.png" | relative_url }}" />
+        <meta property="og:image" content=" {{ "/roots/images/thumbnails/{{ page.title }}.gif" | relative_url }}"></image> <!--i literally can barely decipher what this means-->
+        <!--i have no idea if this works but it's all just prayers at this point
+            might also have to add a landing.gif-->
     </head>
     <body>
 
