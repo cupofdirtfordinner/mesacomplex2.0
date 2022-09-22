@@ -29,11 +29,12 @@
 
         <title>{{ page.title }}</title>
 
+        {% capture liquidgif %}/roots/images/thumbnails/{{ page.title }}.gif{% endcapture %} 
         <!--metadata (the shit that shows up when you link a website on social media)-->
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="mesa.rip: {{ page.title }}"/>
         <meta property="og:description" content="look no further, we're the best game website. Those other ones? garbage. Cool math doesn't hold a candle. we killed tyrone from tyrones unblocked games in cold blood. behold our power, cower in fear"/>
-        <meta property="og:image" content=" {{ "/roots/images/thumbnails/{{ page.title }}.gif" | relative_url }}"></image> <!--i literally can barely decipher what this means-->
+        <meta property="og:image" content="{{ liquidgif | relative_url }}"></image> <!--i literally can barely decipher what this means-->
         <meta property="og:image" content="{{ "/roots/images/mesa-icon.png" | relative_url }}" /> <!--backup-->
         <meta property="og:url" content="https://mesa.rip/"/>
         <!--i have no idea if this works but it's all just prayers at this point
