@@ -181,26 +181,32 @@
   }
   
   .dropdown {
-    position: relative;
-    display: inline-block;
+      position: relative;
+      display: inline-block;
+      padding-bottom:10px;
   }
   
   .dropdown-content {
       top: 54px;
-      display: none;
       position: absolute;
       border-radius: 16px;
       width: 340px;
       z-index: 1;
       background:rgba(48, 48, 48, 0.9);
-  }
-  
+      display:block;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
   .dropdown:hover .dropdown-content {
-    display: block;
-    transition: opacity 0.3s;
+      animation: clip .3s ease-in-out;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      transform: scale(1.1);
+      top:68px;
   }
 
-
+  .dropdown:not(:hover) .dropdown-content {
+    animation: clip2 .2s ease-in-out;
+}
 
   /*gameslist, sidebar*/
 
@@ -364,6 +370,32 @@ hr /*divider between game buttons*/ {
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@keyframes clip {
+  0% {
+  	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transform: scale(1);
+    top:54px;
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transform: scale(1.1);
+    top:68px;
+  }
+}
+
+@keyframes clip2 {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transform: scale(1.1);
+    top:68px;
+  }
+  100% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    transform :scale(1);
+    top:54px;
   }
 }
 
