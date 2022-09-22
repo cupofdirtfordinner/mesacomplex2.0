@@ -3,7 +3,7 @@ layout: main
 title: NECROMICIDE
 ---
 
-<embed src="src/" width="900" height="700" allowfullscreen>
+<embed src="src/" width="90%" height="600vh" allowfullscreen>
 
 <br>
 
