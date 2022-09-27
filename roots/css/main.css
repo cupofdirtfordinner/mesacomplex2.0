@@ -38,7 +38,7 @@
     }
 
     #logo {
-        width: 70%;
+        width: 50%;
         margin-bottom: 4%;
 
         transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -48,7 +48,7 @@
 
     #logo:hover {
       margin-bottom: 0%;
-        width: 90%;
+        width: 65%;
         filter: drop-shadow(0 0 3rem black);
     }
     
@@ -207,6 +207,11 @@
   .dropdown:not(:hover) .dropdown-content {
     animation: clip2 .2s ease-in-out;
 }
+
+  .ad {
+    height:90%;
+    position:absolute
+  } 
 
   /*gameslist, sidebar*/
 
