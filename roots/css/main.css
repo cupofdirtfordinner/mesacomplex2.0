@@ -67,7 +67,7 @@
     }
     
     #game-title {
-      background: linear-gradient(90deg, rgb(243, 0, 53) 0%, rgb(255, 72, 0) 35%, rgb(255, 255, 255) 100%);
+      background: linear-gradient(90deg, rgb(98, 0, 255) 25%, rgb(255, 31, 162) 60%, rgb(255, 255, 255) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
@@ -330,6 +330,9 @@ hr /*divider between game buttons*/ {
 
 /* warning logic */
 
+
+.unmesa {display:none} /*gotta get ads somehow*/
+
 .unmesa #fosstext{display:none;} /* if an object has .unmesa class, then a child with #fosstext will not be displayed */
 .foss #unmesatext{display:none;} /* vice versa */
 .foss #mesatext {display:none;}
@@ -346,6 +349,7 @@ hr /*divider between game buttons*/ {
 
 #buttondiv:not(.foss):not(.unmesa) #unmesatext {display:none;} 
 #buttondiv:not(.foss):not(.unmesa) #fosstext {display:none;} /* im like 90% sure there is a much better way of doing this but i cant figure it out rn */
+
 
 /*animations*/
 

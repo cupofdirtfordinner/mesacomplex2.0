@@ -1,0 +1,125 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Blob Omelette</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        #body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background-color: rgb(46, 46, 46) !important;
+        }
+        canvas#webgl {
+            width: 100% !important;
+            height: 100% !important;
+        }
+        #loader {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        #dvd {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            left: 50px;
+        }
+        #circle, #circle2, #center, #center2 {
+            left: 200px;
+            top: 200px;
+            transform: translate(-50%, -50%);
+        }
+        #avatar {
+            animation: rotation 2s infinite linear;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+        #circle {
+            background: rgb(150, 150, 150);
+            border-radius: 50%;
+            width: 340px;
+            height: 340px;
+            position: absolute;
+            border: 2px solid black;
+        }
+        #circle2 {
+            background: black;
+            border-radius: 50%;
+            width: 325px;
+            height: 325px;
+            position: absolute;
+        }
+        #center {
+            background: rgb(150, 150, 150);
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+            position: absolute;
+        }
+        #center2 {
+            background: rgb(46, 46, 46);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+        .no-select {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+        }
+        #bo-percentage {
+            color: #efeae2;
+            font-size: 56px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="body">
+    <div id="loader">
+        <div id="dvd">
+            <div class="no-select" id="circle"></div>
+            <div class="no-select" id="circle2"></div>
+            <img class="no-select" id="avatar" src="avatar.png">
+            <div class="no-select" id="center"></div>
+            <div class="no-select" id="center2"></div>
+        </div>
+        <div id="bo-percentage">
+            Loading...
+        </div>
+    </div>
+    <canvas id="webgl"></canvas>
+    <script>
+        function updateProgress(p) {
+            var elem = document.getElementById("bo-percentage");
+            elem.innerText = "Loading... " + p + "%";
+        }
+        function onGameLoaded() {
+            var elem = document.getElementById("loader");
+            elem.remove();
+        }
+    </script>
+    <script type="text/javascript" src="lr.js"></script>
+</body>
+</html>
