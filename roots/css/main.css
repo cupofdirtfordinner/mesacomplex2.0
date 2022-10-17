@@ -331,7 +331,7 @@ hr /*divider between game buttons*/ {
 /* warning logic */
 
 
-.unmesa {display:none} /*gotta get ads somehow*/
+/*.unmesa {display:none} / gotta get ads somehow*/
 
 .unmesa #fosstext{display:none;} /* if an object has .unmesa class, then a child with #fosstext will not be displayed */
 .foss #unmesatext{display:none;} /* vice versa */
