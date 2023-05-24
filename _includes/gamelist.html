@@ -4,7 +4,10 @@
 ---------------------------------
 
 step 1. type the following:
-    { % include btn.html name='name' %}
+    { % include btn.html name='name' tags='tag' %}
+step 1.1. set 'name' to the name of the game folder
+step 1.2. set 'tag' to foss  if the game is open source, and set it to unmesa if it is not open source
+and you did not get permission from the developer to add it. if else, remove tags='tag' entirely.
 
 step 2. upload your game's thumbnail to roots/images/thumbnails/
 
@@ -67,3 +70,5 @@ thumbnails all need to end in .gif
 {% include btn.html name='cut the rope' tags='foss' %}
 
 {% include btn.html name='smash bros melee light' tags='foss' %}
+
+{ % include btn.html name='OpenTTD' tags='foss' %}
